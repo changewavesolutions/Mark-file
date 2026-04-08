@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Catalog Demo</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <h1>Image Catalog Demo</h1>
+    <p class="subtitle">Upload an image to extract visible item details and enrich them from public sources.</p>
+
+    <div class="card">
+      <div id="errorBox" class="error"></div>
+
+      <input type="file" id="imageInput" accept="image/*" />
+
+      <div class="preview-box">
+        <img id="previewImage" alt="Preview" />
+        <span id="previewPlaceholder">No image selected</span>
+      </div>
+
+      <div class="button-row">
+        <button id="analyzeBtn" class="primary">Analyze</button>
+        <button id="clearBtn" type="button">Clear</button>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="date_entered">Date Entered</label>
+          <input id="date_entered" type="date" readonly />
+        </div>
+      </div>
+
+      <div class="field full">
+        <label for="description">Description</label>
+        <textarea id="description" readonly></textarea>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" readonly />
+        </div>
+
+        <div class="field">
+          <label for="brand_make">Brand / Make</label>
+          <input id="brand_make" type="text" readonly />
+        </div>
+
+        <div class="field">
+          <label for="model">Model</label>
+          <input id="model" type="text" readonly />
+        </div>
+
+        <div class="field">
+          <label for="type">Type</label>
+          <input id="type" type="text" readonly />
+        </div>
+
+        <div class="field full">
+          <label for="visible_specs">Visible Specifications</label>
+          <input id="visible_specs" type="text" readonly />
+        </div>
+
+        <div class="field full">
+          <label for="visible_markings">Visible Markings</label>
+          <input id="visible_markings" type="text" readonly />
+        </div>
+
+        <div class="field full">
+          <label for="enriched_summary">Enriched Summary</label>
+          <textarea id="enriched_summary" readonly></textarea>
+        </div>
+
+        <div class="field full">
+          <label for="source_url">Source URL</label>
+          <input id="source_url" type="text" readonly />
+        </div>
+
+        <div class="field full">
+          <label for="confidence_notes">Confidence Notes</label>
+          <textarea id="confidence_notes" readonly></textarea>
+        </div>
+
+        <div class="field full">
+          <label for="raw_json">Raw JSON</label>
+          <pre id="raw_json"></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
